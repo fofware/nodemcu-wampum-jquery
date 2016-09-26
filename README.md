@@ -19,7 +19,7 @@ count which is currently possible with the tiny web server without going out of 
 ## Requirements
 
 ### NodeMCU Web server
-This project structure is adapted to the [nodemcu-wampum](https://github.com/freegroup/nodemcu-wampum).
+This project structureis adapted to the [nodemcu-wampum](https://github.com/freegroup/nodemcu-wampum).
 Just follow the instructions of this project how to install this tiny Web server with SD card
 support on your ESP8266.
 
@@ -63,11 +63,12 @@ npm install
 ```
 
 ##Build the project
-Just type:
+After all the installation stuff you can just type:
 ```
 grunt
 ```
-and you find the result in the **dist** folder.
+and you find the result in the **dist** folder. In future -you can just type `grunt` if you
+have made any changes in the *src* folder to update your *./dist* folder.
 
 You can now copy the *dist/html* and *dist/lua* folder onto your SD card.
 
