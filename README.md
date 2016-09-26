@@ -5,14 +5,15 @@ Basic example for an **web interface** for the ESP8266 or WeMos module and the
 This tiny web server serves all required resources, which are located on
 the SD card, via HTTP.
 
-## What does the WebApp?
-This demo switch on/off the buildin LED of the WeMos or ESP8266 with an **jQuery ajax call**.
-Sounds very simple but you should keep in mind that the ESP is very limited in memory and
-a normal WebBrowser forces up to 4 parallel connections to the HTTP server.
-
-
-
 ![WebServer](/teaser.png?raw=true "ESP8266 as full web server")
+
+
+## What does the WebApp?
+Switch on/off the buildin LED of the WeMos or ESP8266 with an **jQuery ajax call**.
+Sounds very simple but you should keep in mind that the ESP is very limited in memory and
+a normal WebBrowser forces up to 4 parallel connections to the HTTP server. This demo app show
+how to serialize, or reduce the parallel connections, to max. 3. This is the maximum
+count which is currently possible with the tiny web server without going out of memory.
 
 
 ## Requirements
