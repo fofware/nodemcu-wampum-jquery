@@ -20,8 +20,7 @@ count which is currently possible with the tiny web server without going out of 
 
 ### NodeMCU Web server
 This project structureis adapted to the [nodemcu-wampum](https://github.com/freegroup/nodemcu-wampum).
-Just follow the instructions of this project how to install this tiny Web server with SD card
-support on your ESP8266.
+Just follow the instructions of this project how to install this tiny Web server on your ESP8266.
 
 Again:
  - Install the [nodemcu-wampum](https://github.com/freegroup/nodemcu-wampum) on your ESP8266
