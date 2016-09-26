@@ -37,7 +37,7 @@ npm install -g bower
 ```
 and you have it.
 
-## Download used js libs
+## Download jQuery
 and all required libraries in the right version with one command
 
 ```
@@ -57,3 +57,9 @@ Just type:
 grunt
 ```
 and you find the result in the **dist** folder.
+
+You can now copy the *dist/html* and *dist/lua* folder onto your SD card.
+
+**Note**: all files within the *html* folder has the suffix **.gz** because the
+grunt build script zip the content for faster download of the content from the NodeMCU.
+
