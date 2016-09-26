@@ -14,8 +14,9 @@ This demo switch on/off the buildin LED of the WeMos (ESP8266) with an jQuery aj
 ## Requirements
 
 ### NodeMCU Web server
-This project structure is adapted to the [nodemcu-wampum](https://github.com/freegroup/nodemcu-wampum). Just follow
-the instructions of this project how to enable the ESP8266 Web server with SD card support.
+This project structure is adapted to the [nodemcu-wampum](https://github.com/freegroup/nodemcu-wampum).
+Just follow the instructions of this project how to install this tiny Web server with SD card
+support on your ESP8266.
 
 ## How to build
 
