@@ -1,0 +1,26 @@
+body{
+    font:14px/20px 'MontserratRegular',Helvetica,Arial,sans-serif;
+    color:#222;
+    background-color:#2c323c;
+    color:#7a828b;
+    padding:30px;
+}
+
+
+label{
+    font-family: Verdana;
+    font-weight: 100;
+    font-size:12px;
+}
+.icheckbox{
+    display:inline-block;
+    position: relative;
+    top: -2px;
+}
+
+.control_pane{
+    border:1px solid black;
+    display: inline-block;
+    padding:10px;
+    background-color: #363c46;
+}

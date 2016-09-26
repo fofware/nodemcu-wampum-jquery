@@ -1,11 +1,59 @@
 <html>
 <head>
     <SCRIPT src="./assets/javascript/dependencies.js"></SCRIPT>
+    <link rel='stylesheet' href='./assets/css/main.css' type='text/css' media='screen' />
+
+    <script type="text/javascript">
+        // load the style after all JS has been loaded to be memory/heap friendly on the ESP8266.
+        // Currently my impl. of the HTTP can't handle  HTTP connections at once. 3 is possible.
+        // In this case we serialize the resource loading
+        $(document).ready(function(){
+            if (document.createStyleSheet){
+                document.createStyleSheet('./assets/css/polaris/polaris.css');
+            }
+            else {
+                $("head").append($("<link rel='stylesheet' href='./assets/css/polaris/polaris.css' type='text/css' media='screen' />"));
+            }
+
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_polaris',
+                radioClass: 'iradio_polaris',
+                increaseArea: '-10%' // optional
+            });
+
+            $('input').on('ifUnchecked', function(event){
+                $.ajax("./led_off.lc");
+            });
+            $('input').on('ifChecked', function(event){
+                $.ajax("./led_on.lc");
+            });
+
+
+        });
+    </script>
+
 </head>
-<body>
-Your ESP is up and running....
+<body >
+<div class="skin skin-polaris">
+<h1>Toggeling your LED on pin 4 on/off...with style</h1>
+
+<p>
+    The purpose of this demo is to show how to handle loading of jQuery, CSS and images
+    from the ESP8266 without running out of memory on the ESP. Additional I add some
+    AJAX calls (instead of page refresh) to enable/disable the buildin LED of the WeMos
+    (GPIO pin 4).
+</p>
 <br>
-<a href="files.lc" >file listing</a>
+
+
+<div class="control_pane">
+    <div class="icheckbox_polaris" >
+        <input type="checkbox" id="polaris-checkbox">
+    </div>
+    <label for="polaris-checkbox">GPIO Pin 4 (buildin LED)</label>
+</div>
+</div>
+
 </body>
 
 </html>

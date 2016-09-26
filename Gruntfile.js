@@ -14,7 +14,8 @@ module.exports = function (grunt) {
             libs: {
                 nonull: true,
                 src: [
-                    './bower_components/zepto/zepto.min.js'
+                    './bower_components/jquery/dist/jquery.min.js',
+                    './bower_components/iCheck/icheck.min.js'
                 ],
                 dest: './src/html/assets/javascript/dependencies.js'
             }
@@ -43,6 +44,16 @@ module.exports = function (grunt) {
                         dest: 'dist'
                     }
                 ]
+            },
+            css: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: './bower_components/iCheck/skins',
+                        src: ['polaris/**/*.*'],
+                        dest: 'src/html/assets/css'
+                    }
+                ]
             }
 
         },
@@ -69,6 +80,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'clean',
         'concat',
+        'copy:css',
         'compress:nodeMCU',
         'copy:compressed', "copy:lua"
     ]);
