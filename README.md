@@ -1,10 +1,14 @@
 # nodemcu-wampum-jquery
 
-Very simple example for an web project for the ESP8266 or WeMos module.
-All the resources are located on the SD card instead of the internal FLASH RAM
+Basic example for an **web interface** for the ESP8266 or WeMos module and the
+[nodemcu-wampum](https://github.com/freegroup/nodemcu-wampum) web server.
+This tiny web server serves all required resources, which are located on
+the SD card, via HTTP.
 
-
-This demo switch on/off the buildin LED of the WeMos (ESP8266) with an jQuery ajax call.
+## What does the WebApp?
+This demo switch on/off the buildin LED of the WeMos or ESP8266 with an **jQuery ajax call**.
+Sounds very simple but you should keep in mind that the ESP is very limited in memory and
+a normal WebBrowser forces up to 4 parallel connections to the HTTP server.
 
 
 
@@ -17,6 +21,11 @@ This demo switch on/off the buildin LED of the WeMos (ESP8266) with an jQuery aj
 This project structure is adapted to the [nodemcu-wampum](https://github.com/freegroup/nodemcu-wampum).
 Just follow the instructions of this project how to install this tiny Web server with SD card
 support on your ESP8266.
+
+Again:
+ - Install the [nodemcu-wampum](https://github.com/freegroup/nodemcu-wampum) on your ESP8266
+ - Copy the build result *(./dist/)* of this project onto your SD card
+
 
 ## How to build
 
